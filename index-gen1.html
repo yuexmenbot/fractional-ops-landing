@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your First Ops Hire - Sebastian Mueller | MING Labs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'stone-50': '#fafaf9',
+                        'stone-100': '#f5f5f4',
+                        'stone-200': '#e7e5e4',
+                        'stone-300': '#d6d3d1',
+                        'stone-400': '#a8a29e',
+                        'stone-500': '#78716c',
+                        'stone-600': '#57534e',
+                        'stone-700': '#44403c',
+                        'stone-800': '#292524',
+                        'stone-900': '#1c1917',
+                        'amber-50': '#fffbeb',
+                        'amber-100': '#fef3c7',
+                        'amber-200': '#fde68a',
+                        'amber-300': '#fcd34d',
+                        'amber-400': '#fbbf24',
+                        'amber-500': '#f59e0b',
+                        'amber-600': '#d97706',
+                        'amber-700': '#b45309',
+                        'amber-800': '#92400e',
+                        'amber-900': '#78350f'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-stone-50 text-stone-800">
+
+    <!-- Hero Section -->
+    <section class="min-h-screen bg-gradient-to-br from-stone-100 to-amber-50 flex items-center">
+        <div class="container mx-auto px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center">
+                <!-- Scarcity Badge -->
+                <div class="inline-flex items-center bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-medium mb-8">
+                    🔥 One Client Slot Available - January 2025
+                </div>
+                
+                <!-- Problem/Agitation Hook -->
+                <h1 class="text-4xl md:text-6xl font-bold text-stone-900 mb-6 leading-tight">
+                    Stop Burning 15+ Hours a Week on Operations You <span class="text-amber-600">Hate</span>
+                </h1>
+                
+                <p class="text-xl md:text-2xl text-stone-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+                    You didn't build your company to manage spreadsheets and chase invoices. Let a proven ops expert handle the chaos while you focus on what only you can do: <strong>growing your business.</strong>
+                </p>
+                
+                <!-- Risk Reduction Badge -->
+                <div class="bg-green-100 border border-green-300 rounded-lg p-4 mb-8 max-w-lg mx-auto">
+                    <p class="text-green-800 font-medium text-sm">
+                        🛡️ 30-Day Money-Back Guarantee - If you don't get your time back, you don't pay
+                    </p>
+                </div>
+                
+                <!-- Pricing Anchor -->
+                <div class="bg-white rounded-lg shadow-lg p-6 mb-8 max-w-2xl mx-auto">
+                    <div class="text-center">
+                        <p class="text-stone-500 text-sm mb-2">Full-time Head of Operations</p>
+                        <p class="text-3xl font-bold text-stone-900 line-through mb-2">$150,000+</p>
+                        <p class="text-stone-500 text-sm mb-4">+ Benefits, Management Overhead, 6-Month Search</p>
+                        
+                        <div class="border-t pt-4">
+                            <p class="text-amber-600 text-sm font-medium mb-2">Fractional Ops Partner</p>
+                            <p class="text-4xl font-bold text-amber-600 mb-2">$5,000-8,000/mo</p>
+                            <p class="text-stone-600 text-sm">Start Monday. No Management Required.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CTA Button -->
+                <div class="space-y-4">
+                    <a href="#process" class="inline-block bg-amber-600 hover:bg-amber-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors">
+                        See How This Works →
+                    </a>
+                    <p class="text-stone-500 text-sm">15-minute call to discuss your specific situation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry-Specific Pain Points -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-stone-900 mb-16">
+                    Operations Chaos Looks Different For Every Business
+                </h2>
+                
+                <!-- Industry Tabs -->
+                <div class="mb-12">
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <button onclick="showIndustry('saas')" class="industry-tab px-6 py-3 rounded-lg font-medium transition-colors bg-amber-600 text-white" id="saas-tab">SaaS/Tech</button>
+                        <button onclick="showIndustry('agency')" class="industry-tab px-6 py-3 rounded-lg font-medium transition-colors bg-stone-200 text-stone-700" id="agency-tab">Agency/Services</button>
+                        <button onclick="showIndustry('ecommerce')" class="industry-tab px-6 py-3 rounded-lg font-medium transition-colors bg-stone-200 text-stone-700" id="ecommerce-tab">E-commerce</button>
+                    </div>
+                </div>
+
+                <!-- SaaS Industry -->
+                <div id="saas-content" class="industry-content">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="space-y-6">
+                            <div class="bg-red-50 border-l-4 border-red-400 p-6 rounded-r-lg">
+                                <h3 class="font-bold text-red-800 mb-2">📊 Subscription & Revenue Operations</h3>
+                                <p class="text-red-700">Failed payment handling, churn analysis, upgrade/downgrade workflows, revenue recognition - all manual processes eating your time.</p>
+                            </div>
+                            
+                            <div class="bg-red-50 border-l-4 border-red-400 p-6 rounded-r-lg">
+                                <h3 class="font-bold text-red-800 mb-2">🎯 Customer Success Chaos</h3>
+                                <p class="text-red-700">Onboarding sequences, support ticket routing, usage monitoring, renewal processes - everything breaks as you scale.</p>
+                            </div>
+                            
+                            <div class="bg-red-50 border-l-4 border-red-400 p-6 rounded-r-lg">
+                                <h3 class="font-bold text-red-800 mb-2">📈 Data & Reporting Mess</h3>
+                                <p class="text-red-700">MRR calculations, cohort analysis, CAC/LTV reporting scattered across tools with no single source of truth.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-br from-amber-50 to-amber-100 p-8 rounded-lg">
+                            <h3 class="text-2xl font-bold text-amber-900 mb-6">SaaS Operations Transformation</h3>
+                            <div class="space-y-4 text-amber-800">
+                                <div class="flex items-start space-x-3">
+                                    <span class="text-amber-600">✓</span>
+                                    <span>Automated subscription lifecycle management</span>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <span class="text-amber-600">✓</span>
+                                    <span>Customer health scoring and automated interventions</span>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <span class="text-amber-600">✓</span>
+                                    <span>Real-time revenue dashboards and metrics</span>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <span class="text-amber-600">✓</span>
+                                    <span>Scalable customer onboarding sequences</span>
+                                </div>
+                            </div>
+                            <div class="mt-6 bg-amber-200 p-4 rounded-lg">
+                                <p class="text-amber-900 font-medium text-sm">
+                                    <strong>"Sarah's SaaS company went from 20 hours/week of manual subscription management to 2 hours/week of strategic oversight."</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Agency Industry -->
+                <div id="agency-content" class="industry-content hidden">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="space-y-6">
+                            <div class="bg-red-50 border-l-4 border-red-400 p-6 rounded-r-lg">
+                                <h3 class="font-bold text-red-800 mb-2">👥 Client & Project Management</h3>
+                                <p class="text-red-700">Multiple client workflows, project status tracking, scope creep, deliverable management - all requiring constant oversight.</p>
+                            </div>
+                            
+                            <div class="bg-red-50 border-l-4 border-red-400 p-6 rounded-r-lg">
+                                <h3 class="font-bold text-red-800 mb-2">💰 Billing & Financial Operations</h3>
+                                <p class="text-red-700">Retainer management, expense tracking, project profitability, client invoicing - spreadsheet hell.</p>
+                            </div>
+                            
+                            <div class="bg-red-50 border-l-4 border-red-400 p-6 rounded-r-lg">
+                                <h3 class="font-bold text-red-800 mb-2">⚡ Team & Resource Coordination</h3>
+                                <p class="text-red-700">Freelancer onboarding, capacity planning, skill matching, quality control across multiple simultaneous projects.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-br from-amber-50 to-amber-100 p-8 rounded-lg">
+                            <h3 class="text-2xl font-bold text-amber-900 mb-6">Agency Operations Transformation</h3>
+                            <div class="space-y-4 text-amber-800">
+                                <div class="flex items-start space-x-3">
+                                    <span class="text-amber-600">✓</span>
+                                    <span>Streamlined client onboarding and project kickoff</span>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <span class="text-amber-600">✓</span>
+                                    <span>Automated project status and client reporting</span>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <span class="text-amber-600">✓</span>
+                                    <span>Real-time profitability tracking by project</span>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <span class="text-amber-600">✓</span>
+                                    <span>Scalable freelancer and team coordination</span>
+                                </div>
+                            </div>
+                            <div class="mt-6 bg-amber-200 p-4 rounded-lg">
+                                <p class="text-amber-900 font-medium text-sm">
+                                    <strong>"Marcus scaled his agency from 15 to 25 people without adding operations overhead - everything automated."</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- E-commerce Industry -->
+                <div id="ecommerce-content" class="industry-content hidden">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="space-y-6">
+                            <div class="bg-red-50 border-l-4 border-red-400 p-6 rounded-r-lg">
+                                <h3 class="font-bold text-red-800 mb-2">📦 Inventory & Fulfillment</h3>
+                                <p class="text-red-700">Stock level monitoring, supplier coordination, seasonal demand planning, fulfillment partner management - constant firefighting.</p>
+                            </div>
+                            
+                            <div class="bg-red-50 border-l-4 border-red-400 p-6 rounded-r-lg">
+                                <h3 class="font-bold text-red-800 mb-2">🔄 Returns & Customer Service</h3>
+                                <p class="text-red-700">Return processing, refund management, customer service workflows, quality control - manual processes that don't scale.</p>
+                            </div>
+                            
+                            <div class="bg-red-50 border-l-4 border-red-400 p-6 rounded-r-lg">
+                                <h3 class="font-bold text-red-800 mb-2">📊 Financial & Seasonal Operations</h3>
+                                <p class="text-red-700">Seasonal cash flow planning, vendor payment terms, profitability by SKU, promotional coordination across channels.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-br from-amber-50 to-amber-100 p-8 rounded-lg">
+                            <h3 class="text-2xl font-bold text-amber-900 mb-6">E-commerce Operations Transformation</h3>
+                            <div class="space-y-4 text-amber-800">
+                                <div class="flex items-start space-x-3">
+                                    <span class="text-amber-600">✓</span>
+                                    <span>Automated inventory management and reordering</span>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <span class="text-amber-600">✓</span>
+                                    <span>Streamlined returns and customer service workflows</span>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <span class="text-amber-600">✓</span>
+                                    <span>Seasonal scaling and demand planning systems</span>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <span class="text-amber-600">✓</span>
+                                    <span>Real-time profitability and cash flow dashboards</span>
+                                </div>
+                            </div>
+                            <div class="mt-6 bg-amber-200 p-4 rounded-lg">
+                                <p class="text-amber-900 font-medium text-sm">
+                                    <strong>"David's e-commerce business handles 10x the volume with the same operational overhead - even during peak season."</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security & Trust Section -->
+    <section class="py-16 bg-stone-100">
+        <div class="container mx-auto px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-stone-900 mb-16">
+                    Your Data & Team Security is Non-Negotiable
+                </h2>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="text-3xl mb-4">🔒</div>
+                        <h3 class="font-bold text-stone-900 mb-3">Enterprise Security</h3>
+                        <p class="text-stone-700">SOC 2 compliant processes, encrypted data handling, role-based access controls. Your sensitive information never leaves secure channels.</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="text-3xl mb-4">📋</div>
+                        <h3 class="font-bold text-stone-900 mb-3">Legal Protection</h3>
+                        <p class="text-stone-700">Comprehensive NDAs, professional liability insurance, clearly defined data usage agreements. Your business secrets stay secret.</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="text-3xl mb-4">👥</div>
+                        <h3 class="font-bold text-stone-900 mb-3">Team Integration</h3>
+                        <p class="text-stone-700">Seamless integration with your existing team. I enhance their capabilities rather than replacing them - no job security concerns.</p>
+                    </div>
+                </div>
+                
+                <div class="mt-12 bg-amber-100 border-l-4 border-amber-600 p-6 rounded-r-lg">
+                    <p class="text-amber-800">
+                        <strong>Privacy First:</strong> All systems are built for you to own and control. When our engagement ends, you have full access to everything - no vendor lock-in, no data hostage situations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-16 bg-white">
+        <div class="container mx-auto px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-stone-900 mb-4">
+                    The 90-Day Operations Transformation
+                </h2>
+                <p class="text-xl text-center text-stone-600 mb-16">
+                    A proven system to go from operations chaos to autonomous operations in 90 days
+                </p>
+                
+                <div class="space-y-12">
+                    <!-- Month 1 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden border">
+                        <div class="bg-red-100 px-6 py-4">
+                            <h3 class="text-2xl font-bold text-red-800">Month 1: Fire Fighting & Discovery</h3>
+                            <p class="text-red-700 mt-2">Stop the bleeding. Understand the chaos. Stabilize critical processes.</p>
+                        </div>
+                        <div class="p-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <h4 class="font-bold text-stone-900 mb-3">Week 1-2: Immediate Stabilization</h4>
+                                    <ul class="space-y-2 text-stone-700">
+                                        <li class="flex items-start space-x-2">
+                                            <span class="text-red-600">•</span>
+                                            <span>Security setup and access controls</span>
+                                        </li>
+                                        <li class="flex items-start space-x-2">
+                                            <span class="text-red-600">•</span>
+                                            <span>Audit current operations pain points</span>
+                                        </li>
+                                        <li class="flex items-start space-x-2">
+                                            <span class="text-red-600">•</span>
+                                            <span>Fix urgent process breakdowns</span>
+                                        </li>
+                                        <li class="flex items-start space-x-2">
+                                            <span class="text-red-600">•</span>
+                                            <span>Take over time-consuming admin tasks</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-stone-900 mb-3">Week 3-4: Systems Mapping</h4>
+                                    <ul class="space-y-2 text-stone-700">
+                                        <li class="flex items-start space-x-2">
+                                            <span class="text-red-600">•</span>
+                                            <span>Document existing workflows</span>
+                                        </li>
+                                        <li class="flex items-start space-x-2">
+                                            <span class="text-red-600">•</span>
+                                            <span>Team integration and capability assessment</span>
+                                        </li>
+                                        <li class="flex items-start space-x-2">
+                                            <span class="text-red-600">•</span>
+                                            <span>Design system architecture roadmap</span>
+                                        </li>
+                                        <li class="flex items-start space-x-2">
+                                            <span class="text-red-600">•</span>
+                                            <span>Weekly founder check-ins (2 hours max)</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mt-6 bg-red-50 p-4 rounded-lg">
+                                <p class="text-red-800 font-medium">Result: You immediately get 10-15 hours back per week while we assess and plan the full transformation.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Month 2 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden border">
+                        <div class="bg-amber-100 px-6 py-4">
+                            <h3 class="text-2xl font-bold text-amber-800">Month 2: System Building</h3>
+                            <p class="text-amber-700 mt-2">Build bulletproof systems. Implement automation. Create SOPs.</p>
+                        </div>
+                        <div class="p-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <h4 class="font-bold text-stone-900 mb-3">Core Systems Implementation</h4>
+                                    <ul class="space-y-2 text-stone-700">
+                                        <li class="flex items-start space-x-2">
+                                            <span class="text-amber-600">•</span>
+                                            <span>Financial operations (invoicing, expenses, reporting)</span>
+                                        </li>
+                                        <li class="flex items-start space-x-2">
+                                            <span class="text-amber-600">•</span>
+                                            <span>Client/customer lifecycle management systems</span>
+                                        </li>
+                                        <li class="flex items-start space-x-2">
+                                            <span class="text-amber-600">•</span>
+                                            <span>Vendor management & procurement processes</span>
+                                        </li>
+                                        <li class="flex items-start space-x-2">
+                                            <span class="text-amber-600">•</span>
+                                            <span>Team coordination and workflow systems</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-stone-900 mb-3">Automation & Documentation</h4>
+                                    <ul class="space-y-2 text-stone-700">
+                                        <li class="flex items-start space-x-2">
+                                            <span class="text-amber-600">•</span>
+                                            <span>Build workflow automations (Zapier, Make, etc.)</span>
+                                        </li>
+                                        <li class="flex items-start space-x-2">
+                                            <span class="text-amber-600">•</span>
+                                            <span>Create comprehensive SOPs for every process</span>
+                                        </li>
+                                        <li class="flex items-start space-x-2">
+                                            <span class="text-amber-600">•</span>
+                                            <span>Set up monitoring & alerting systems</span>
+                                        </li>
+                                        <li class="flex items-start space-x-2">
+                                            <span class="text-amber-600">•</span>
+                                            <span>Train team on new systems and handoffs</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mt-6 bg-amber-50 p-4 rounded-lg">
+                                <p class="text-amber-800 font-medium">Result: Rock-solid systems that handle 80% of operations automatically. Your team is empowered and your involvement drops to strategic oversight only.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Month 3+ -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden border">
+                        <div class="bg-green-100 px-6 py-4">
+                            <h3 class="text-2xl font-bold text-green-800">Month 3+: Autonomous Operations</h3>
+                            <p class="text-green-700 mt-2">Systems run themselves. Growth scales smoothly. You focus on strategy.</p>
+                        </div>
+                        <div class="p-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <h4 class="font-bold text-stone-900 mb-3">Fully Autonomous Operation</h4>
+                                    <ul class="space-y-2 text-stone-700">
+                                        <li class="flex items-start space-x-2">
+                                            <span class="text-green-600">•</span>
+                                            <span>Monthly strategic reviews (1 hour max)</span>
+                                        </li>
+                                        <li class="flex items-start space-x-2">
+                                            <span class="text-green-600">•</span>
+                                            <span>Proactive system optimization</span>
+                                        </li>
+                                        <li class="flex items-start space-x-2">
+                                            <span class="text-green-600">•</span>
+                                            <span>Exception handling (you only see what matters)</span>
+                                        </li>
+                                        <li class="flex items-start space-x-2">
+                                            <span class="text-green-600">•</span>
+                                            <span>Growth-ready infrastructure scaling</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-stone-900 mb-3">Continuous Improvement</h4>
+                                    <ul class="space-y-2 text-stone-700">
+                                        <li class="flex items-start space-x-2">
+                                            <span class="text-green-600">•</span>
+                                            <span>Monthly efficiency audits</span>
+                                        </li>
+                                        <li class="flex items-start space-x-2">
+                                            <span class="text-green-600">•</span>
+                                            <span>Team development and capability building</span>
+                                        </li>
+                                        <li class="flex items-start space-x-2">
+                                            <span class="text-green-600">•</span>
+                                            <span>Cost optimization recommendations</span>
+                                        </li>
+                                        <li class="flex items-start space-x-2">
+                                            <span class="text-green-600">•</span>
+                                            <span>Strategic operations planning</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mt-6 bg-green-50 p-4 rounded-lg">
+                                <p class="text-green-800 font-medium">Result: Operations that scale automatically with growth. Your team is autonomous and capable. You operate like a 50-person company with the overhead of a 5-person company.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Enhanced CTA -->
+                <div class="text-center mt-16">
+                    <div class="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-8 rounded-lg max-w-2xl mx-auto">
+                        <h3 class="text-2xl font-bold mb-4">Ready to Start Monday?</h3>
+                        <p class="mb-6">The January client slot is the last available slot for Q1 2025. When this fills, the next opening is April.</p>
+                        <div class="space-y-3 mb-6">
+                            <p class="text-amber-100 text-sm">✓ 30-Day Money-Back Guarantee</p>
+                            <p class="text-amber-100 text-sm">✓ Enterprise Security & NDAs</p>
+                            <p class="text-amber-100 text-sm">✓ Your Team Enhanced, Not Replaced</p>
+                        </div>
+                        <a href="#contact" class="inline-block bg-white text-amber-600 font-bold py-3 px-8 rounded-lg hover:bg-stone-100 transition-colors">
+                            Reserve Your Slot →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-stone-100">
+        <div class="container mx-auto px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-stone-900 mb-16">
+                    What Founders Are Saying
+                </h2>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="mb-4">
+                            <div class="text-amber-400">★★★★★</div>
+                            <p class="text-stone-700 italic">"Sebastian took over our subscription billing chaos in Week 1. By Month 3, everything was automated. I went from 25 hours/week on ops to 3 hours/month of strategic oversight."</p>
+                        </div>
+                        <div class="border-t pt-4">
+                            <p class="font-bold text-stone-900">Sarah Chen</p>
+                            <p class="text-stone-600 text-sm">Founder, DataFlow SaaS</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="mb-4">
+                            <div class="text-amber-400">★★★★★</div>
+                            <p class="text-stone-700 italic">"I was skeptical about letting someone else handle client operations. Sebastian integrated so well that clients thought he'd been with us for years. Complete game-changer."</p>
+                        </div>
+                        <div class="border-t pt-4">
+                            <p class="font-bold text-stone-900">Marcus Rodriguez</p>
+                            <p class="text-stone-600 text-sm">Founder, Velocity Digital</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="mb-4">
+                            <div class="text-amber-400">★★★★★</div>
+                            <p class="text-stone-700 italic">"Peak season used to break our operations every year. Sebastian built systems that handle 10x volume automatically. We actually enjoy Q4 now instead of dreading it."</p>
+                        </div>
+                        <div class="border-t pt-4">
+                            <p class="font-bold text-stone-900">David Park</p>
+                            <p class="text-stone-600 text-sm">Founder, Alpine Outdoor Gear</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Me Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-stone-900 mb-16">
+                    Why Sebastian Mueller?
+                </h2>
+                
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <!-- Left: Credentials -->
+                    <div>
+                        <div class="space-y-6">
+                            <div class="border-l-4 border-amber-600 pl-6">
+                                <h3 class="font-bold text-stone-900 mb-2">Founded & Scaled MING Labs</h3>
+                                <p class="text-stone-700">Built a 20-person innovation agency from zero to multiple 7-figures. I've lived the operations chaos you're experiencing right now.</p>
+                            </div>
+                            
+                            <div class="border-l-4 border-amber-600 pl-6">
+                                <h3 class="font-bold text-stone-900 mb-2">Senior Operations Experience</h3>
+                                <p class="text-stone-700">15+ years building operations systems for growth companies. I know what breaks at each stage and how to prevent it.</p>
+                            </div>
+                            
+                            <div class="border-l-4 border-amber-600 pl-6">
+                                <h3 class="font-bold text-stone-900 mb-2">No Hand-Holding Required</h3>
+                                <p class="text-stone-700">You're not hiring another employee to manage. You're partnering with someone who owns the outcome and executes autonomously.</p>
+                            </div>
+                            
+                            <div class="border-l-4 border-amber-600 pl-6">
+                                <h3 class="font-bold text-stone-900 mb-2">Founder-to-Founder Understanding</h3>
+                                <p class="text-stone-700">I understand the founder mindset, cash flow considerations, and the pressure to make every dollar count in building operations.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right: The Problem I Solve -->
+                    <div class="bg-stone-100 p-8 rounded-lg">
+                        <h3 class="text-xl font-bold text-stone-900 mb-4">The Problem I Solve</h3>
+                        <p class="text-stone-700 mb-6">
+                            You know you need systems. You've tried to hire operations people before. They either quit because they weren't senior enough to handle the complexity, or they needed constant management (defeating the purpose).
+                        </p>
+                        <p class="text-stone-700 mb-6">
+                            You can't justify a $150,000+ Head of Operations, but you can't keep drowning in administrative work either.
+                        </p>
+                        <div class="bg-amber-100 border-l-4 border-amber-600 p-4">
+                            <p class="text-amber-800 font-medium">
+                                I embed as your fractional operations partner - senior enough to own complex problems, experienced enough to need zero management, and founder-minded enough to treat your money like my own.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced FAQ Section -->
+    <section class="py-16 bg-stone-100">
+        <div class="container mx-auto px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-stone-900 mb-16">
+                    Common Questions
+                </h2>
+                
+                <div class="space-y-6">
+                    <!-- FAQ Item -->
+                    <div class="bg-white rounded-lg shadow-sm">
+                        <div class="p-6">
+                            <h3 class="font-bold text-stone-900 mb-3">How is this different from hiring a full-time operations person?</h3>
+                            <p class="text-stone-700">
+                                You get 15+ years of senior operations experience without the $150K+ salary, benefits, or 6-month search process. More importantly, you get someone who needs zero management and owns outcomes, not just tasks. Most ops hires require constant direction; I design and implement complete systems autonomously.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-sm">
+                        <div class="p-6">
+                            <h3 class="font-bold text-stone-900 mb-3">How do you handle data security and confidentiality?</h3>
+                            <p class="text-stone-700">
+                                Enterprise-grade security is non-negotiable. All data handling follows SOC 2 protocols, with comprehensive NDAs, role-based access controls, and encrypted communication channels. Your sensitive information is never stored outside secure systems, and all access is logged and monitored.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-sm">
+                        <div class="p-6">
+                            <h3 class="font-bold text-stone-900 mb-3">What if this doesn't work for my specific industry?</h3>
+                            <p class="text-stone-700">
+                                I've built operations for SaaS, agencies, e-commerce, manufacturing, and professional services. The fundamentals are universal: cash flow, customer workflows, team coordination, and vendor relationships. Plus, you have a 30-day money-back guarantee if you don't see immediate value.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-sm">
+                        <div class="p-6">
+                            <h3 class="font-bold text-stone-900 mb-3">How does this work with my existing team?</h3>
+                            <p class="text-stone-700">
+                                I enhance your team's capabilities rather than replacing them. Your people learn new systems and become more effective, not obsolete. I explicitly design systems for your team to own and operate, ensuring they feel empowered rather than threatened.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-sm">
+                        <div class="p-6">
+                            <h3 class="font-bold text-stone-900 mb-3">What happens if you get hit by a bus?</h3>
+                            <p class="text-stone-700">
+                                Everything I build comes with comprehensive documentation, SOPs, and system access credentials. By Month 3, any competent operations person could step in and maintain what we've built. Plus, I train your team on critical processes. You'll never be dependent on me personally - only on the systems we create together.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-sm">
+                        <div class="p-6">
+                            <h3 class="font-bold text-stone-900 mb-3">Why the 30-day money-back guarantee?</h3>
+                            <p class="text-stone-700">
+                                I'm confident you'll see immediate value in Month 1 - reduced time burden, stabilized processes, and clear roadmap for transformation. If you're not completely satisfied with the progress in 30 days, you get a full refund. This removes your risk and proves my commitment to outcomes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section id="contact" class="py-16 bg-gradient-to-br from-amber-600 to-amber-700 text-white">
+        <div class="container mx-auto px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    The January Slot Closes This Week
+                </h2>
+                <p class="text-xl mb-8 text-amber-100">
+                    I only take one client at a time. When this slot fills, the next opening is April 2025.
+                </p>
+                
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-8 mb-8">
+                    <h3 class="text-2xl font-bold mb-4">Next Steps:</h3>
+                    <div class="space-y-3 text-left max-w-2xl mx-auto">
+                        <div class="flex items-start space-x-3">
+                            <span class="bg-amber-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mt-1">1</span>
+                            <p>Book a 15-minute call to discuss your specific operations situation</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <span class="bg-amber-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mt-1">2</span>
+                            <p>I'll audit your current chaos and confirm fit</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <span class="bg-amber-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mt-1">3</span>
+                            <p>If it's a match, we start Monday morning with 30-day guarantee</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <a href="mailto:sm3cb@proton.me?subject=January%20Operations%20Partnership%20-%20Let's%20Talk&body=Hi%20Sebastian,%0D%0A%0D%0AI'm%20interested%20in%20discussing%20the%20January%20operations%20partnership%20slot.%0D%0A%0D%0AQuick%20context%20about%20my%20situation:%0D%0A-%20Company:%20%0D%0A-%20Industry:%20%0D%0A-%20Current%20operations%20pain%20points:%20%0D%0A-%20Hours/week%20spent%20on%20ops:%20%0D%0A-%20Biggest%20frustration:%20%0D%0A-%20Team%20size:%20%0D%0A%0D%0AWhat's%20the%20best%20way%20to%20schedule%20a%20quick%20call?%0D%0A%0D%0AThanks,%0D%0A[Your%20Name]" class="inline-block bg-white text-amber-600 font-bold py-4 px-8 rounded-lg text-lg hover:bg-stone-100 transition-colors">
+                        Reserve Your Call → sm3cb@proton.me
+                    </a>
+                    <p class="text-amber-100 text-sm">No sales pitch. No hard sell. Just an honest conversation about whether this is right for your situation.</p>
+                    <div class="mt-4 flex flex-wrap justify-center gap-4 text-amber-200 text-sm">
+                        <span>✓ 30-Day Guarantee</span>
+                        <span>✓ Enterprise Security</span>
+                        <span>✓ Team Enhancement</span>
+                        <span>✓ Industry Expertise</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-stone-900 text-stone-400 py-8">
+        <div class="container mx-auto px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center">
+                <p class="mb-4">
+                    <strong class="text-white">Sebastian Mueller</strong> | Founder, MING Labs | Fractional Operations Partner
+                </p>
+                <p class="text-sm">
+                    Built for founders who are done burning time on operations they hate.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Industry tab switching
+        function showIndustry(industry) {
+            // Hide all content
+            document.querySelectorAll('.industry-content').forEach(content => {
+                content.classList.add('hidden');
+            });
+            
+            // Reset all tabs
+            document.querySelectorAll('.industry-tab').forEach(tab => {
+                tab.classList.remove('bg-amber-600', 'text-white');
+                tab.classList.add('bg-stone-200', 'text-stone-700');
+            });
+            
+            // Show selected content
+            document.getElementById(industry + '-content').classList.remove('hidden');
+            
+            // Highlight selected tab
+            const selectedTab = document.getElementById(industry + '-tab');
+            selectedTab.classList.remove('bg-stone-200', 'text-stone-700');
+            selectedTab.classList.add('bg-amber-600', 'text-white');
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
